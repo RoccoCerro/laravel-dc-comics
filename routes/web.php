@@ -19,3 +19,5 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/comics', [ComicController::class,'comics'])->name('comics');
+
+Route::get('/comics/{pasta}', [ComicController::class, 'show'])->name('comics.show');
