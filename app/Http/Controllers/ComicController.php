@@ -9,7 +9,7 @@ class ComicController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function comics()
+    public function index()
     {
         return view("comics.comics");
     }
