@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-  <form method="POST">
+  <form action="{{ route('comics.store') }}" method="POST">
 
     {{-- Cross Site Request Forgering --}}
     @csrf 
@@ -13,13 +13,13 @@
     </div>
 
     <div class="mb-3">
-      <label for="image" class="form-label">thumb</label>
-      <input type="text" name="image" class="form-control" id="image" placeholder="http://...">
+      <label for="thumb" class="form-label">thumb</label>
+      <input type="text" name="thumb" class="form-control" id="thumb" placeholder="http://...">
     </div>
 
     <div class="mb-3">
       <label for="price" class="form-label">price</label>
-      <input type="number" name="price" class="form-control" id="price" placeholder="">
+      <input type="text" name="price" class="form-control" id="price" placeholder="">
     </div>
 
     <div class="mb-3">
@@ -28,8 +28,8 @@
     </div>
 
     <div class="mb-3">
-      <label for="date" class="form-label">Date</label>
-      <input type="text" name="date" class="form-control" id="date" placeholder="">
+      <label for="sale_date" class="form-label">Date</label>
+      <input type="text" name="sale_date" class="form-control" id="sale_date" placeholder="">
     </div>
 
     <div class="mb-3">

@@ -29,8 +29,15 @@ class ComicController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
-       
+    {   
+        // recuperiamo i parametri che arrivano dal form
+        $form_data = $request->all();
+
+        // crea l'istanza, la popola con i dati e la salva nel db
+        $new_pasta = Comic::create($form_data);
+
+        // redirect alla rotta show di pasta 
+        return to_route('comics.show', $new_pasta);
     }
 
     /**
