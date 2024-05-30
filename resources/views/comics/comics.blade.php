@@ -14,12 +14,17 @@
             <li>{{ $comic->type}}</li>
             <li><a href="{{ route('comics.edit', $comic) }}">Edit</a></li>
             <li>
-              <form action="{{ route('comics.destroy', $comic) }}" method="POST">
+              <form class="comics-delete-form" action="{{ route('comics.destroy', $comic) }}" method="POST">
                 @method('DELETE')
                 @csrf
 
-                <button class="btn btn-link link-danger">Trash</button>
+                <button type="submit" class="btn btn-link link-danger">Trash</button>
 
+                <div class="d-none modal-delete" >
+                  <h5>Sei sicuro di voler eliminare?</h5>
+                  <button class="btn-yes">si</button>
+                  <button class="btn-no">no</button>
+                </div>
               </form>
             </li>
           </ul>
