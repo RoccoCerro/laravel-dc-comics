@@ -23,17 +23,17 @@
 
     <div class="mb-3">
       <label for="price" class="form-label">price</label>
-      <input type="text" name="price" class="form-control" id="price" placeholder="" value="{{ $comic->price }}
+      <input type="text" name="price" class="form-control" id="price" placeholder="" value="{{ $comic->price }}">
     </div>
 
     <div class="mb-3">
       <label for="series" class="form-label">Series</label>
-      <input type="text" name="series" class="form-control" id="series" placeholder="" value="{{ $comic->series }}>
+      <input type="text" name="series" class="form-control" id="series" placeholder="" value="{{ $comic->series }}">
     </div>
 
     <div class="mb-3">
       <label for="sale_date" class="form-label">Date</label>
-      <input type="text" name="sale_date" class="form-control" id="sale_date" placeholder="" value="{{ $comic->sale_date }}>
+      <input type="text" name="sale_date" class="form-control" id="sale_date" placeholder="" value="{{ $comic->sale_date }}">
     </div>
 
     <div class="mb-3">
