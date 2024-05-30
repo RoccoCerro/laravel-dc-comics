@@ -51,17 +51,26 @@ class ComicController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Comic $comic)
     {
-        //
+        return view('comics.edit', compact('comic'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Comic $comic)
     {
-        //
+        $form_data = $request->all();
+        // dd($request->all());
+        // dd($pasta);
+        $comic->fill($form_data); //non salva automaticamente sul db
+        // se qui dobbiamo fare qualcos'altro
+        $comic->save();
+        // $pasta->update($form_data);
+
+        // redirect alla rotta show di pasta 
+        return to_route('comics.show', $comic);
     }
 
     /**

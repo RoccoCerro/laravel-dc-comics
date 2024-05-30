@@ -7,11 +7,12 @@
     </div>
     <div class="row">
       @foreach ($comics as $comic)
-        <div class="col-4">
+        <div class="col-12">
           <ul>
             <li><a href="{{ route('comics.show', $comic) }}">{{ $comic->title }}</a></li>
             <li>{{ $comic->description}}</li>
             <li>{{ $comic->type}}</li>
+            <li><a href="{{ route('comics.edit', $comic) }}">Edit</a></li>
           </ul>
         </div>
       @endforeach
