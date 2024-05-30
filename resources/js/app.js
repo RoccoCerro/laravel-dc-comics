@@ -20,6 +20,7 @@ document.querySelectorAll('.comics-delete-form').forEach((form, i) => {
 
         const btnYes = document.querySelectorAll('.btn-yes');
         btnYes[i].addEventListener('click', (ev) =>{
+            ev.preventDefault();
             console.log('hai cliccato si')
             form.submit();
         })
