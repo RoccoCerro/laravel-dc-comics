@@ -13,6 +13,15 @@
             <li>{{ $comic->description}}</li>
             <li>{{ $comic->type}}</li>
             <li><a href="{{ route('comics.edit', $comic) }}">Edit</a></li>
+            <li>
+              <form action="{{ route('comics.destroy', $comic) }}" method="POST">
+                @method('DELETE')
+                @csrf
+
+                <button class="btn btn-link link-danger">Trash</button>
+
+              </form>
+            </li>
           </ul>
         </div>
       @endforeach
