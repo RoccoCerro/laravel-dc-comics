@@ -26,10 +26,14 @@ document.querySelectorAll('.comics-delete-form').forEach((form, i) => {
 
         const btnNo = document.querySelectorAll('.btn-no');
         btnNo[i].addEventListener('click', (ev) =>{
+            ev.preventDefault();
+            
             console.log('hai cliccato no');
-            stop;
+
+            modalDelete[i].classList.add('d-none');
+            modalDelete[i].classList.remove('d-block');
         })
-        // form.submit();
+
     });
 });
 
